@@ -281,7 +281,7 @@ function myFunction() {
           
       pagados(con);
       if(taskV.categoria=="costo"){
-        if(imagenpagada==0){
+   
   
         
         
@@ -311,32 +311,7 @@ function myFunction() {
                         </div> 
                    </div>
                     </div>`;
-        }else{
-          let URL = `${taskV.imagen}`;
-          let btn = `btnjarabe${con}`;
-          document.getElementById('jarabeDiv').innerHTML += `
-        <div id="data${taskV.id}" class="bg-white max-w-sm mx-auto rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl "><div class="card"><div class="card mb-4 shadow-sm">
-        <img onclick="mostrar(','','','${URL}','${con}','${btn}')" class="card-img-top" style=" height:28rem; width:23rem;" src="${URL}"
-        alt ="Card image cap">
-        <div class="card-body" >
-      
-         <div align="center">
-        
-         </div>
-      
-        <h5 align="center" class="card-title"</h5>
-        <h6   align="center" class="card-subtitle mb-2 text-muted">${taskV.descripcion} </h6>
-        <h5 style="display:block;>${taskV.descripcion}</h5>
-        </div>
-        </div>
-        <div class=" align-item-center">
-        <div class="btn-group">
-        </div>
-        </div> 
-        </div>
-        </div>`;
-        }
-        
+  
           } else{
             let URL = `${taskV.imagen}`;
             let btn = `btnjarabe${con}`;
