@@ -16,6 +16,9 @@ var config = {
   
   
   function render1(){
+
+    var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+console.log(seq);
     var datos = JSON.parse(localStorage.getItem('datos'));
       if(datos==null){
           
