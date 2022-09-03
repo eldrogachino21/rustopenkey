@@ -137,9 +137,9 @@ function myFunction() {
     var counter= t;
    
     if(precio==""){
-      categoria = "gratuita"
+      categoria = "costo"
     }else{
-      var categoria = "costo"
+      var categoria = "gratuita"
     }
   
   
