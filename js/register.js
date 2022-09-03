@@ -2,6 +2,7 @@ var config = {
     apiKey: "AIzaSyAmxHeJ3eFT4VgbD9RJnw4_i-a4mfw-1Nc",
     authDomain: "rustopenkey.firebaseapp.com",
     projectId: "rustopenkey",
+    databaseURL: "https://rustopenkey-default-rtdb.firebaseio.com",
     storageBucket: "rustopenkey.appspot.com",
     messagingSenderId: "342681849359",
     appId: "1:342681849359:web:d74145020adc74cece9d7a",
