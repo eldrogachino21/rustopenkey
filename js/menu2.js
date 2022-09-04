@@ -13,7 +13,7 @@ function bodyrender(){
     document.getElementById("generatecode").innerHTML=seq;
 
     count++;
-
+    console.log(count)
     document.getElementById("range").value=count;
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
