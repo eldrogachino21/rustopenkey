@@ -1,4 +1,4 @@
-
+var count = 0 ;
 
 function bodyrender(){ 
     document.getElementById("generatecode").innerHTML=""
@@ -12,7 +12,9 @@ function bodyrender(){
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
 
+    count++;
 
+    document.getElementById("range").value=count;
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
