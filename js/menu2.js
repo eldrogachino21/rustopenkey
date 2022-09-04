@@ -14,7 +14,9 @@ function bodyrender(){
 
     count++;
     console.log(count)
-    document.getElementById("rango").value=count.toString();
+
+    var input = document.getElementById("rango");
+    input.value = count
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
