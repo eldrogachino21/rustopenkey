@@ -14,9 +14,12 @@ function bodyrender(){
 
     count++;
     console.log(count)
-
+    var contador = document.getElementById("contador")
     var input = document.getElementById("rango");
     input.value = count
+    contador.innerHTML=count
+
+
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
