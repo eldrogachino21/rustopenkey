@@ -14,7 +14,7 @@ function bodyrender(){
 
     count++;
     console.log(count)
-    document.getElementById("range").innerHTML=count;
+    document.getElementById("range").value=count;
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
