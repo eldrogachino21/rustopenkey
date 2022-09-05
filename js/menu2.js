@@ -13,14 +13,12 @@ function generate(){
 
     var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
-    task.on("child_added", function(data) {
+    task.forEach(element => {
         
-    data.forEach(element => {
     var taskV = element.val();
     counter++;
     console.log(counter)
     
-    });
   });
 
     document.getElementById("generatecode").innerHTML=""
