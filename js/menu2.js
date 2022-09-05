@@ -18,7 +18,7 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-  var task = firebase.database().ref("contador/"+persona[0].telefono+"/");
+  var task = firebase.database().ref("contador/"+persona[0].telefono);
       
   task.on("child_added", function(data) {
       
