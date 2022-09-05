@@ -22,8 +22,9 @@ function generate(){
     task.on("value", function(snapshot) {
         
     const data = snapshot.val();
+
     counter++;
-    console.log(counter)
+    console.log(data)
     
     });
 
