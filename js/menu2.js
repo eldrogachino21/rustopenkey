@@ -20,13 +20,17 @@ function generate(){
 
     var task = firebase.database().ref("contador/"+persona[0].telefono);
       
-    task.on("value", function(snapshot) {
+    task.on("child_added", function(data) {
         
-    const data = snapshot.val();
+    data.forEach(element => {
+          
+        
+    var taskV = element.val();
 
-    counter=data.toString()
+    counter=taskV.Contador
     
     });
+  });
 
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
