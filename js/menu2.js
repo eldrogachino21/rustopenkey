@@ -24,7 +24,7 @@ function generate(){
         
     const data = snapshot.val();
 
-    counter=data
+    counter=data.toString()
     
     });
 
