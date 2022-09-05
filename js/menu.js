@@ -25,6 +25,15 @@ function myFunction() {
     
     }
     db.set(itemdb);
+
+    var item={
+      puerta: contador,
+     nombre:pagado
+    }
+
+    products.push(item);
+    localStorage.setItem("puerta",JSON.stringify(products));
+
   location.replace('menu2.html');
 
     }
