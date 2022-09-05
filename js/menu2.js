@@ -17,9 +17,8 @@ function generate(){
         
     data.forEach(element => {
     var taskV = element.val();
-    console.log(taskV)
     counter++;
-    
+    console.log(counter)
     
     });
   });
