@@ -23,7 +23,7 @@ function generate(){
         
     const data = snapshot.val();
 
-    counter++;
+    counter=data
     
     });
 
