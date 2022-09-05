@@ -1,5 +1,5 @@
 var count = 0 ;
-
+var counter=0;
 function bodyrender(){ 
     document.getElementById("generatecode").innerHTML=""
 
@@ -11,15 +11,13 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
+    var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
     task.on("child_added", function(data) {
         
     data.forEach(element => {
         
-      
-    var taskV = element.val();
-    taskV.id=count
+    counter++;
 
     
     });
