@@ -19,6 +19,12 @@ function bodyrender(){
     input.value = count
     contador.innerHTML=count
 
+    let db = firebase.database().ref("combinaciones/");
+    let itemdb= {
+        id:count,
+        Combinacion:seq,
+    }
+    db.set(itemdb);
 
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
@@ -28,3 +34,6 @@ function bodyrender(){
 
 
 }
+
+
+
