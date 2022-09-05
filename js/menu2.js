@@ -15,9 +15,8 @@ function generate(){
       
     task.on("child_added", function(data) {
         
-    data.forEach(element => {
-    var taskV = element.val();
-    console.log(taskV)
+    task.forEach(data => {
+    console.log(data)
     counter++;
 
     
