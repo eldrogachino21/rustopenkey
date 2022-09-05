@@ -6,7 +6,24 @@ function bodyrender(){
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
-} function generate(){ 
+} 
+
+function generate(){ 
+
+    var task = firebase.database().ref("combinaciones/");
+      
+    task.on("child_added", function(data) {
+        
+    data.forEach(element => {
+        
+      
+    var taskV = element.val();
+    taskV.id=count
+
+    
+    });
+  });
+
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
@@ -18,6 +35,21 @@ function bodyrender(){
     var input = document.getElementById("rango");
     input.value = count
     contador.innerHTML=count
+
+    var task = firebase.database().ref("combinaciones/");
+      
+    task.on("child_added", function(data) {
+        
+    data.forEach(element => {
+        
+      
+    var taskV = element.val();
+    if(taskV.Combinacion==seq){
+        generate();
+    }
+    
+    });
+  });
 
     let db = firebase.database().ref("combinaciones/");
     let itemdb= {
@@ -32,6 +64,7 @@ function bodyrender(){
 
       document.getElementById("Buttongenerate").disabled=true;
 
+     
 
 }
 
