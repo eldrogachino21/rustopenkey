@@ -27,7 +27,7 @@ function myFunction() {
     db.set(itemdb);
 
     var item={
-      puerta: contador,
+      Npuerta: contador,
      nombre:pagado
     }
 
