@@ -1,5 +1,5 @@
-var count = 0 ;
-var counter=0;
+var count = 0;
+var counter = 0;
 function bodyrender(){ 
     document.getElementById("generatecode").innerHTML=""
 
@@ -27,7 +27,7 @@ function generate(){
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
-
+    count=counter;
     count++;
     console.log(count)
     var contador = document.getElementById("contador")
