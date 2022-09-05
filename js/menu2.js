@@ -50,7 +50,6 @@ function generate(){
   });
     let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
-        id:count,
         Combinacion:seq,
     }
     db.set(itemdb);
