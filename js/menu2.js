@@ -17,15 +17,7 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("contador/"+persona[0].telefono);
-      
-    task.on("value", function(snapshot) {
-        
-    const data = snapshot.val();
-
-    counter++;
-    
-    });
+   
 
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
