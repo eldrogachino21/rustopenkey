@@ -18,14 +18,14 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("contador/"+persona[0].telefono);
+    var task1 = firebase.database().ref("contador/"+persona[0].telefono);
       
-    task.on("child_added", function(data) {
+    task1.on("child_added", function(data1) {
         
-    data.forEach(element => {
+    data1.forEach(element1 => {
           
         
-    var taskV = element.val();
+    var taskV = element1.val();
     console.log(taskV.Contador)
     counter=taskV.Contador
     
