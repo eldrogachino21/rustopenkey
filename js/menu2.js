@@ -30,7 +30,6 @@ function generate(){
     document.getElementById("generatecode").innerHTML=seq;
     count=counter;
     count++;
-    console.log(count)
     var contador = document.getElementById("contador")
     var input = document.getElementById("rango");
     input.value = count
