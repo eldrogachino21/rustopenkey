@@ -17,14 +17,13 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
+    var task = firebase.database().ref("contador/"+persona[0].telefono);
       
     task.on("value", function(snapshot) {
         
     const data = snapshot.val();
 
     counter++;
-    console.log(data)
     
     });
 
@@ -59,6 +58,11 @@ function generate(){
     }
     db.set(itemdb);
 
+    let db = firebase.database().ref("contador/"+persona[0].telefono);
+    let itemdb= {
+        Contador:count,
+    }
+    db.set(itemdb);
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
