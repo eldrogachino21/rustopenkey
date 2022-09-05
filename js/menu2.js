@@ -17,7 +17,15 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-   
+    var task = firebase.database().ref("contador/"+persona[0].telefono);
+      
+    task.on("value", function(snapshot) {
+        
+    const data = snapshot.val();
+
+    counter++;
+    
+    });
 
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
@@ -50,11 +58,11 @@ function generate(){
     }
     db.set(itemdb);
 
-    let db = firebase.database().ref("contador/"+persona[0].telefono);
-    let itemdb= {
+    let db2 = firebase.database().ref("contador/"+persona[0].telefono);
+    let itemdb2= {
         Contador:count,
     }
-    db.set(itemdb);
+    db2.set(itemdb2);
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
       }, 3000);
