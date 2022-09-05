@@ -26,7 +26,7 @@ function generate(){
           
         
     var taskV = element.val();
-
+    console.log(taskV.Contador)
     counter=taskV.Contador
     
     });
