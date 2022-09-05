@@ -4,6 +4,7 @@ let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
 
+
     document.getElementById("generatecode").innerHTML=""
     document.getElementById("nombrepuerta").innerHTML=""
 
