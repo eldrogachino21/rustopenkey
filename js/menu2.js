@@ -7,7 +7,7 @@ function bodyrender(){
     document.getElementById("generatecode").innerHTML=""
     document.getElementById("nombrepuerta").innerHTML=""
 
-    document.getElementById("nombrepuerta").innerHTML=puerta[0].nombre + " " + puerta[0].puerta
+    document.getElementById("nombrepuerta").innerHTML=puerta[0].nombre + " " + puerta[0].Npuerta
 
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
