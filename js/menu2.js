@@ -7,10 +7,11 @@ function bodyrender(){
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
 } 
+let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("combinaciones/");
+    var task = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
       
     task.on("child_added", function(data) {
         
@@ -36,7 +37,7 @@ function generate(){
     input.value = count
     contador.innerHTML=count
 
-    var task = firebase.database().ref("combinaciones/");
+    var task = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
       
     task.on("child_added", function(data) {
         
@@ -50,8 +51,7 @@ function generate(){
     
     });
   });
-
-    let db = firebase.database().ref("combinaciones/");
+    let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
         id:count,
         Combinacion:seq,
