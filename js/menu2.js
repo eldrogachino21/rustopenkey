@@ -11,7 +11,7 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task = firebase.database().ref("combinaciones/");
+    var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
     task.on("child_added", function(data) {
         
@@ -19,7 +19,7 @@ function generate(){
     var taskV = element.val();
     console.log(taskV)
     counter++;
-
+    
     
     });
   });
