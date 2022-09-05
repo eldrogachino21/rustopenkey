@@ -18,18 +18,18 @@ let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
 
-    var task1 = firebase.database().ref("contador/"+persona[0].telefono);
+  var task = firebase.database().ref("contador/"+persona[0].telefono+"/");
       
-    task1.on("child_added", function(data1) {
-        
-    data1.forEach(element1 => {
-          
-        
-    var taskV = element1.val();
-    console.log(taskV.Contador)
+  task.on("child_added", function(data) {
+      
+  data.forEach(element => {
+      
     
-    });
+  var taskV = element.val();
+  console.log("contador ="+taskV.Contador)
+  
   });
+});
 
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
