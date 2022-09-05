@@ -13,13 +13,13 @@ function generate(){
 
     var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
-    task.forEach(element => {
+    task.on("value", function(snapshot) {
         
-    var taskV = element.val();
+    const data = snapshot.val();
     counter++;
     console.log(counter)
     
-  });
+    });
 
     document.getElementById("generatecode").innerHTML=""
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
