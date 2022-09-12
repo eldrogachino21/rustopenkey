@@ -63,7 +63,9 @@ function generate(){
           cuenta=0;
     
         }
-        
+      }
+    });
+  
 
 if(cuenta==0){
     let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
