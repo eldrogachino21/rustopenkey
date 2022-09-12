@@ -50,14 +50,14 @@ function generate(){
       
     var taskV1 = element.val();
     if(taskV1==seq){
-      contador=1;
+      cuenta=1;
       alert("generado uno nuevo")
         generate();
     }
     
     });
   });
-if(contador==0){
+if(cuenta==0){
     let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
         Combinacion:seq,
