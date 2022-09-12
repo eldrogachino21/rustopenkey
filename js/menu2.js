@@ -53,9 +53,17 @@ function generate(){
     starCountRef.once('value', (snapshot) => {
     
       if (snapshot.exists()) {
-        console.log(snapshot.val());
-        contar++ 
-        const valor = snapshot.val().contar;
+ 
+       
+
+
+        snapshot.forEach(element => {
+      
+    
+          const valor = snapshot.val();
+          console.log("contador ="+valor)
+          
+
         if(valor==seq){
           cuenta=1;
           alert("generado uno nuevo")
@@ -64,6 +72,8 @@ function generate(){
           cuenta=0;
     
         }
+      });
+
       }
     });
   
