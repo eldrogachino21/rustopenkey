@@ -49,7 +49,7 @@ function generate(){
         
       
     var taskV1 = element.val();
-    if(taskV1.Combinacion==seq){
+    if(taskV1==seq){
         generate();
         alert("generado uno nuevo")
     }
