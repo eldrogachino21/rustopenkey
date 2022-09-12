@@ -52,10 +52,8 @@ function generate(){
     task1.on("child_added", function(data) {
         
     data.forEach(elemento => {
-        
-    var taskV1 = ""
-     taskV1 = elemento.val();
-    if(taskV1==seq){
+
+    if(elemento.val()==seq){
       cuenta=1;
       alert("generado uno nuevo")
         generate();
