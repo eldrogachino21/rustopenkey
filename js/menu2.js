@@ -53,6 +53,9 @@ function generate(){
       cuenta=1;
       alert("generado uno nuevo")
         generate();
+    }else{
+      cuenta=0;
+
     }
     
     });
