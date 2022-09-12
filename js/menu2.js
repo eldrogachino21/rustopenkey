@@ -1,6 +1,5 @@
 var count = 0;
 var counter = 0;
-var contador =0;
 let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
@@ -18,7 +17,7 @@ function bodyrender(){
 let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
-  contador=0
+  var  contador=0
   var task = firebase.database().ref("contador/");
       
   task.on("child_added", function(data) {
