@@ -1,5 +1,6 @@
 var count = 0;
 var counter = 0;
+var contar = 0;
 let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
@@ -53,7 +54,8 @@ function generate(){
     
       if (snapshot.exists()) {
         console.log(snapshot.val());
-        const valor = snapshot.val().Combinacion;
+        contar++ 
+        const valor = snapshot.val().contar;
         if(valor==seq){
           cuenta=1;
           alert("generado uno nuevo")
