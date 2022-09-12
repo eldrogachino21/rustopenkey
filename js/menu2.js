@@ -35,6 +35,7 @@ function generate(){
     var seq = (Math.floor(Math.random() * 10) + 10).toString().substring(1);
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
+    count++;
     var contador = document.getElementById("contador")
     var input = document.getElementById("rango");
     input.value = count
@@ -54,7 +55,6 @@ function generate(){
         generate();
     }else{
       cuenta=0;
-      count++;
 
     }
     
