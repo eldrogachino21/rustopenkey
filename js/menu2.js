@@ -53,8 +53,8 @@ function generate(){
         
     data.forEach(elemento => {
         
-      
-    var taskV1 = elemento.val();
+    var taskV1 = ""
+     taskV1 = elemento.val();
     if(taskV1.toString()==seq){
       cuenta=1;
       alert("generado uno nuevo")
