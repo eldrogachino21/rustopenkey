@@ -13,6 +13,12 @@ function bodyrender(){
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
+
+    let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+0);
+    let itemdb= {
+        Combinacion:seq,
+    }
+    db.set(itemdb);
 } 
 let persona = JSON.parse(localStorage.getItem("datos"));
 var  cuenta=0
