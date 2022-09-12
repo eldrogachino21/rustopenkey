@@ -1,5 +1,6 @@
 var count = 0;
 var counter = 0;
+var contador =0;
 let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
@@ -52,11 +53,13 @@ function generate(){
     if(taskV1==seq){
         generate();
         alert("generado uno nuevo")
+        contador=1;
        return;
     }
     
     });
   });
+if(contador==0){
     let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
         Combinacion:seq,
@@ -76,6 +79,7 @@ function generate(){
 
      
 
+}
 }
 
 
