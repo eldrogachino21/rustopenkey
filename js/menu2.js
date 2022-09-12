@@ -49,6 +49,7 @@ function generate(){
         
       
     var taskV = element.val();
+    console.log(taskV)
     if(taskV.Combinacion==seq){
         generate();
     }
