@@ -17,7 +17,7 @@ function bodyrender(){
 let persona = JSON.parse(localStorage.getItem("datos"));
 
 function generate(){ 
-  var  contador=0
+  var  cuenta=0
   var task = firebase.database().ref("contador/");
       
   task.on("child_added", function(data) {
