@@ -61,7 +61,7 @@ function generate(){
       
     
           const valor = snapshot.val();
-          console.log("contador ="+valor)
+          console.log("contador ="+valor.toString())
           
 
         if(valor==seq){
