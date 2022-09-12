@@ -47,7 +47,6 @@ function generate(){
     input.value = count
     contador.innerHTML=count
 
-    var task1 = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
     var starCountRef = firebase.database().ref('combinaciones/'+persona[0].telefono+'/');
     starCountRef.once('value', (snapshot) => {
