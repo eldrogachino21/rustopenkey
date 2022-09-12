@@ -50,10 +50,9 @@ function generate(){
       
     var taskV1 = element.val();
     if(taskV1==seq){
+      contador=1;
+      alert("generado uno nuevo")
         generate();
-        alert("generado uno nuevo")
-        contador=1;
-       return;
     }
     
     });
