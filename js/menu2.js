@@ -48,8 +48,8 @@ function generate(){
     data.forEach(element => {
         
       
-    var taskV = element.val();
-    console.log(taskV)
+    var taskV1 = element.val();
+    console.log(taskV1)
     if(taskV.Combinacion==seq){
         generate();
     }
