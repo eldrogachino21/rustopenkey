@@ -55,7 +55,7 @@ function generate(){
         
     var taskV1 = ""
      taskV1 = elemento.val();
-    if(taskV1.toString()==seq){
+    if(taskV1==seq){
       cuenta=1;
       alert("generado uno nuevo")
         generate();
