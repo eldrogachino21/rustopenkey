@@ -60,7 +60,7 @@ function generate(){
         snapshot.forEach(element => {
       
     
-          const valor = snapshot.Combinacion;
+          const valor = snapshot.val();
           console.log("contador ="+valor)
           
 
