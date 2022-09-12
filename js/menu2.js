@@ -53,7 +53,7 @@ function generate(){
         
     data.forEach(elemento => {
 
-    if(elemento.val()==seq){
+    if(elemento.val().equals(seq)){
       cuenta=1;
       alert("generado uno nuevo")
         generate();
