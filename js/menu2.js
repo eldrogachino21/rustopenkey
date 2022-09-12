@@ -49,21 +49,22 @@ function generate(){
 
     var task1 = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
-    task1.on("child_added", function(data) {
-        
-    data.forEach(elemento => {
-
-    if(elemento.val().toString()==seq.toString()){
-      cuenta=1;
-      alert("generado uno nuevo")
-        generate();
-    }else{
-      cuenta=0;
-
-    }
+    var starCountRef = firebase.database().ref('combinaciones/'+persona[0].telefono+'/');
+    starCountRef.once('value', (snapshot) => {
     
-    });
-  });
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        const valor = snapshot.val().Combinacion;
+        if(valor==seq){
+          cuenta=1;
+          alert("generado uno nuevo")
+            generate();
+        }else{
+          cuenta=0;
+    
+        }
+        
+
 if(cuenta==0){
     let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
