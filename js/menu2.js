@@ -49,9 +49,9 @@ function generate(){
         
       
     var taskV1 = element.val();
-    console.log(taskV1)
-    if(taskV.Combinacion==seq){
+    if(taskV1.Combinacion==seq){
         generate();
+        alert("generado uno nuevo")
     }
     
     });
