@@ -55,7 +55,7 @@ function generate(){
         
       
     var taskV1 = element.val();
-    if(taskV1==seq){
+    if(taskV1.Combinacion==seq){
       cuenta=1;
       alert("generado uno nuevo")
         generate();
