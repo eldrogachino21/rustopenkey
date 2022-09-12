@@ -41,9 +41,9 @@ function generate(){
     input.value = count
     contador.innerHTML=count
 
-    var task = firebase.database().ref("combinaciones/"+persona[0].telefono);
+    var task1 = firebase.database().ref("combinaciones/"+persona[0].telefono);
       
-    task.on("child_added", function(data) {
+    task1.on("child_added", function(data) {
         
     data.forEach(element => {
         
