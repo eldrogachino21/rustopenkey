@@ -52,6 +52,7 @@ function generate(){
     if(taskV1==seq){
         generate();
         alert("generado uno nuevo")
+        break;
     }
     
     });
