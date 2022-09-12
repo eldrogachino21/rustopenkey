@@ -15,9 +15,9 @@ function bodyrender(){
     document.getElementById("generatecode").innerHTML=seq;
 } 
 let persona = JSON.parse(localStorage.getItem("datos"));
+var  cuenta=0
 
 function generate(){ 
-  var  cuenta=0
   var task = firebase.database().ref("contador/");
       
   task.on("child_added", function(data) {
@@ -76,7 +76,7 @@ if(cuenta==0){
       document.getElementById("Buttongenerate").disabled=true;
 
      
-
+cuenta=0
 }
 }
 
