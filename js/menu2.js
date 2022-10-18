@@ -33,7 +33,7 @@ function generate(){
       
     
   var taskV = element.val();
-  console.log("contador ="+taskV.Contador)
+  console.log("contador ="+taskV.Contador )
   
   });
 });
@@ -61,10 +61,10 @@ function generate(){
       
     
           const valor = elements.val().Combinacion;
-          console.log("contador ="+valor.toString())
+          console.log("contador ="+valor.toString()+"seq"+seq.toString())
           
 
-        if(valor==seq){
+        if(valor.toString()==seq.toString()){
           cuenta=1;
           alert("generado uno nuevo")
             generate();
