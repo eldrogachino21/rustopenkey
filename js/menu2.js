@@ -15,7 +15,7 @@ function bodyrender(){
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
 
-    let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/");
+    let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
     let itemdb= {
         Combinacion:seq,
     }
