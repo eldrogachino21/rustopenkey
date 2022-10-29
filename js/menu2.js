@@ -19,12 +19,28 @@ function bodyrender(){
     let itemdb= {
         Combinacion:seq,
     }
-    db.set(itemdb);
+  
+   db.set(itemdb);
+
+   var starCountRef = firebase.database().ref('contador/'+persona[0].telefono+'/');
+   starCountRef.once('value', (snap) => {
+   
+     if (snap.exists()) {
+     const valores = snap.val().Contador;
+     count = valores ;
+    var contador = document.getElementById("contador")
+    contador.innerHTML=count
+
+    }
+    });
+
+
 } 
 let persona = JSON.parse(localStorage.getItem("datos"));
-var  cuenta=0
 
 function generate(){ 
+var  cuenta=0;
+
   var task = firebase.database().ref("contador/");
       
   task.on("child_added", function(data) {
@@ -39,7 +55,7 @@ function generate(){
 });
 
     document.getElementById("generatecode").innerHTML=""
-    var seq = (Math.floor(Math.random() * 10) + 10).toString().substring(1);
+    var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
     document.getElementById("generatecode").innerHTML=seq;
     count++;
@@ -53,9 +69,6 @@ function generate(){
     starCountRef.once('value', (snapshot) => {
     
       if (snapshot.exists()) {
- 
-       
-
 
         snapshot.forEach(elements => {
       
@@ -67,8 +80,14 @@ function generate(){
         if(valor.toString()==seq.toString()){
           cuenta=1;
           alert("generado uno nuevo")
+          count--;
             generate();
         }else{
+          let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
+          let itemdb= {
+              Combinacion:seq,
+          }
+          db.set(itemdb);
           cuenta=0;
     
         }
@@ -79,11 +98,7 @@ function generate(){
   
 
 if(cuenta==0){
-    let db = firebase.database().ref("combinaciones/"+persona[0].telefono+"/"+count);
-    let itemdb= {
-        Combinacion:seq,
-    }
-    db.set(itemdb);
+ 
 
     let db2 = firebase.database().ref("contador/"+persona[0].telefono);
     let itemdb2= {
@@ -92,7 +107,7 @@ if(cuenta==0){
     db2.set(itemdb2);
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
-      }, 3000);
+      }, 50);
 
       document.getElementById("Buttongenerate").disabled=true;
 
@@ -100,6 +115,8 @@ if(cuenta==0){
 cuenta=0
 }
 }
+
+
 
 
 
