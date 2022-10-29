@@ -107,7 +107,7 @@ if(cuenta==0){
     db2.set(itemdb2);
     setTimeout(function(){
         document.getElementById("Buttongenerate").disabled=false;
-      }, 50);
+      }, 300);
 
       document.getElementById("Buttongenerate").disabled=true;
 
