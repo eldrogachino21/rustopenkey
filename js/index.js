@@ -106,6 +106,8 @@ var config = {
    
   }else{
    alert("los datos no coinciden con los de la cuenta registrada");
+   swal("Hello world!");
+
   }
   });
   
