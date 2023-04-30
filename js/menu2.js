@@ -1,15 +1,16 @@
 var count = 0;
 var counter = 0;
 var contar = 0;
-let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
 
+  let puerta = JSON.parse(localStorage.getItem("puerta"));
+  console.log("puerta" + puerta[0].nombre)
 
     document.getElementById("generatecode").innerHTML=""
     document.getElementById("nombrepuerta").innerHTML=""
 
-    document.getElementById("nombrepuerta").innerHTML=puerta[0].nombre 
+    document.getElementById("nombrepuerta").innerHTML=puerta[0].nombre
 
     var seq = (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
     console.log(seq);
