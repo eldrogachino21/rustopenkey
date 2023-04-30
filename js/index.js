@@ -97,16 +97,14 @@ var config = {
     if(pr2==tel && pr == pass){
       datos(pr2,pr3,pr4);
      
-    alert("ingresaste");
-    swal("Hello world!");
+    swal("Sesion iniciada");
     //Redireccionamiento tras 5 segundos
     
   
     location.href="menu.html";
    
   }else{
-   alert("los datos no coinciden con los de la cuenta registrada");
-   swal("Hello world!");
+   swal("los datos no coinciden con los de la cuenta registrada");
 
   }
   });
