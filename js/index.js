@@ -98,6 +98,7 @@ var config = {
       datos(pr2,pr3,pr4);
      
     alert("ingresaste");
+    swal("Hello world!");
     //Redireccionamiento tras 5 segundos
     
   
