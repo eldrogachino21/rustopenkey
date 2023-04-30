@@ -1,6 +1,7 @@
 var count = 0;
 var counter = 0;
 var contar = 0;
+let puerta = JSON.parse(localStorage.getItem("puerta"));
 
 function bodyrender(){ 
 
